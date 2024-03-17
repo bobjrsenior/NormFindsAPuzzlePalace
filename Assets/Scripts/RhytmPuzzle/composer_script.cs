@@ -12,7 +12,9 @@ public class composer_script : MonoBehaviour
 
     private int mutePos = 0;
 
-    private float[,] muteTimes = new float[9, 4]
+    private bool evaluatedScore = false;
+
+    private float[,] muteTimes = new float[10, 4]
     {
         { -1f, -1f, -1f, -1f },
         { 1.0f, -1f, -1f, -1f },
@@ -22,11 +24,12 @@ public class composer_script : MonoBehaviour
         { 1.0f, 2.0f, 3.5f, -1f },
         { 1.0f, 3.0f, -1f, -1f },
         { 1.0f, -1f, -1f, -1f },
+        { 0f, -1f, -1f, -1f },
         { 0f, -1f, -1f, -1f }
     };
 
 
-    private float[,] unMuteTimes = new float[9, 4]
+    private float[,] unMuteTimes = new float[10, 4]
     {
         { -1f, -1f, -1f, -1f },
         { -1f, 2.0f, -1f, -1f},
@@ -35,6 +38,7 @@ public class composer_script : MonoBehaviour
         { -1f, 1.5f, 4.0f, -1f},
         { -1f, 1.5f, 3.0f, 5.5f },
         { -1f, 2.0f, -1f, -1f },
+        { -1f, -1f, -1f, -1f },
         { -1f, -1f, -1f, -1f },
         { -1f, -1f, -1f, -1f }
     };
@@ -81,7 +85,7 @@ public class composer_script : MonoBehaviour
             musicSource.volume = 1f;
         }
 
-        if (!musicSource.isPlaying)
+        if (!musicSource.isPlaying && !evaluatedScore)
         {
             evaluateScore();
         }
@@ -114,7 +118,7 @@ public class composer_script : MonoBehaviour
             Debug.Log("puzzle lost");
             PuzzleManager.instance.LosePuzzle();
         }
-
+        evaluatedScore = true;
     }
     
 }

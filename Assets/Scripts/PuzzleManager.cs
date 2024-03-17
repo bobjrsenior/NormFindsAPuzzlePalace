@@ -69,6 +69,7 @@ public class PuzzleManager : MonoBehaviour
             if (puzzlePowerLevel == 9)
             {
                 SceneManager.LoadScene(4);
+                return;
             }
             puzzlePowerLevel += 1;
             audioSource1.volume = (puzzlePowerLevel / 9.0f);
