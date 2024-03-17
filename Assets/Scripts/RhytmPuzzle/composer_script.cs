@@ -41,14 +41,13 @@ public class composer_script : MonoBehaviour
 
 
 
-    private float[] expectedHits = new float[] { 1.398f, 2.853f, 4.993f };
+    private float[] expectedHits = new float[] { 0.463f, 1.947f, 4.023f };
     private List<float> actualHits = new List<float>();
 
     // Start is called before the first frame update
     void Start()
     {
         musicSource = GetComponent<AudioSource>();
-        dspSongTime = (float)AudioSettings.dspTime;
         musicSource.Play();
     }
 
@@ -56,7 +55,7 @@ public class composer_script : MonoBehaviour
     void Update()
     {
 
-        songPosition = (float)AudioSettings.dspTime - dspSongTime;
+        songPosition = musicSource.time;
 
         if(Input.GetMouseButtonDown(0))
         {
