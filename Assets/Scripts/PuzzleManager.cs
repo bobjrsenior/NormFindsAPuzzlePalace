@@ -7,7 +7,7 @@ public class PuzzleManager : MonoBehaviour
 {
     public static PuzzleManager instance;
 
-    public int[] puzzleSceneIds = {2};
+    public int[] puzzleSceneIds = {2, 5};
     public int puzzlesWon = 0;
     public int puzzlesLost = 0;
     public int puzzlePowerLevel = 0;
@@ -45,6 +45,10 @@ public class PuzzleManager : MonoBehaviour
                 playingAudioBeforePuzzle = false;
                 LoadPuzzle();
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 

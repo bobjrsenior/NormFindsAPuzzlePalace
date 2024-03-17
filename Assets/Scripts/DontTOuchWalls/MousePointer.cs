@@ -7,6 +7,8 @@ public class MousePointer : MonoBehaviour
     public bool following = false;
     public float maxDistanceStart = 0.25f;
     private float maxDistanceStartSqr = 0.25f;
+    public float xOffset = 0.0f;
+    public float yOffset = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,7 @@ public class MousePointer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -27,7 +29,7 @@ public class MousePointer : MonoBehaviour
         }
         if (following)
         {
-            transform.position = mousePosition;
+            transform.position = mousePosition + new Vector2(xOffset, yOffset);
         }
     }
 
