@@ -10,7 +10,7 @@ public class composer_script : MonoBehaviour
     private AudioSource musicSource;
     private int hitCount;
 
-    private float[] expectedHits = new float[] { 1.322f, 2.75f, 4.77f };
+    private float[] expectedHits = new float[] { 1.398f, 2.853f, 4.993f };
     private List<float> actualHits = new List<float>();
 
     // Start is called before the first frame update
