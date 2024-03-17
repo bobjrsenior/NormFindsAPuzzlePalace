@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774799d74e243cf438cfb0e6a541b324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleSceneIds: 02000000
+  puzzleSceneIds: 0200000005000000
   puzzlesWon: 0
   puzzlesLost: 0
   puzzlePowerLevel: 0
