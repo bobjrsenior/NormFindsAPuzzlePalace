@@ -35,10 +35,6 @@ public class IntroScreenController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-        {
-            addToState();
-        }
         if (introState == 1)
         {
             if (!audioSource.isPlaying)

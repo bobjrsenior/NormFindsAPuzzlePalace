@@ -34,15 +34,16 @@ public class MousePointer : MonoBehaviour
     // called when the cube hits the floor
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.transform.tag.Equals("Wall"))
+        if (!PuzzleManager.instance.playingAudioBeforePuzzle)
         {
-            Debug.Log("Hit Wall");
-            PuzzleManager.instance.LosePuzzle();
-        }
-        else if (col.transform.tag.Equals("Goal"))
-        {
-            Debug.Log("Hit Goal");
-            PuzzleManager.instance.WinPuzzle();
+            if (col.transform.tag.Equals("Wall"))
+            {
+                PuzzleManager.instance.LosePuzzle();
+            }
+            else if (col.transform.tag.Equals("Goal"))
+            {
+                PuzzleManager.instance.WinPuzzle();
+            }
         }
     }
 }

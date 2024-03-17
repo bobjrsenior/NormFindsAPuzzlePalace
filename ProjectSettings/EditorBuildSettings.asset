@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DontTouchWalls1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PPL9Cutscene.unity
+    guid: 9a253694994ab6b25bfb74dccc5f0509
+  - enabled: 1
+    path: Assets/Scenes/OutroScene.unity
+    guid: cd88e20f4610fc78fb2e7032b47d34de
   m_configObjects: {}

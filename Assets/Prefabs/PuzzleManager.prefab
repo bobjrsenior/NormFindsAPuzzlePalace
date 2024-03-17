@@ -54,6 +54,14 @@ MonoBehaviour:
   audioSource1: {fileID: 7594411659653390888}
   audioSource2: {fileID: -4673984266878279243}
   ppl1Clip: {fileID: 8300000, guid: 2b1edf15cf757190db33a95a4141da2a, type: 3}
+  ppl2Clip: {fileID: 8300000, guid: 64a6cfe2605b71f3296acff953eb5d60, type: 3}
+  ppl3Clip: {fileID: 8300000, guid: 6b33f29cb49d6524eb2f57f6b3a5c1c7, type: 3}
+  ppl4Clip: {fileID: 8300000, guid: 8c6bc9302e89ec0ce9093fcd73259458, type: 3}
+  ppl5Clip: {fileID: 8300000, guid: 3d1bbd10e690c8a01b3190363eacfa12, type: 3}
+  ppl6Clip: {fileID: 8300000, guid: 6b33f29cb49d6524eb2f57f6b3a5c1c7, type: 3}
+  ppl7Clip: {fileID: 8300000, guid: 974fb93a0423a3efda1b03c5391a719e, type: 3}
+  ppl8Clip: {fileID: 8300000, guid: 802c169c205daf65f87224878a430c0c, type: 3}
+  ppl9Clip: {fileID: 8300000, guid: d7ff25b99d9ee3f018a6d9ac124b471e, type: 3}
 --- !u!82 &7594411659653390888
 AudioSource:
   m_ObjectHideFlags: 0
@@ -64,9 +72,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 8e7cbdb1f5be17d8cabcc915ffcc93fc, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0

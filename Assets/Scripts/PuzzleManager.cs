@@ -15,6 +15,14 @@ public class PuzzleManager : MonoBehaviour
     public AudioSource audioSource1;
     public AudioSource audioSource2;
     public AudioClip ppl1Clip;
+    public AudioClip ppl2Clip;
+    public AudioClip ppl3Clip;
+    public AudioClip ppl4Clip;
+    public AudioClip ppl5Clip;
+    public AudioClip ppl6Clip;
+    public AudioClip ppl7Clip;
+    public AudioClip ppl8Clip;
+    public AudioClip ppl9Clip;
 
     // Start is called before the first frame update
     void Awake()
@@ -34,6 +42,7 @@ public class PuzzleManager : MonoBehaviour
         {
             if (!audioSource2.isPlaying)
             {
+                playingAudioBeforePuzzle = false;
                 LoadPuzzle();
             }
         }
@@ -44,6 +53,7 @@ public class PuzzleManager : MonoBehaviour
         puzzlesWon = 0;
         puzzlesLost = 0;
         puzzlePowerLevel = 0;
+        audioSource1.volume = (puzzlePowerLevel / 9.0f);
         playingAudioBeforePuzzle = false;
     }
 
@@ -52,14 +62,67 @@ public class PuzzleManager : MonoBehaviour
         puzzlesWon += 1;
         if (puzzlesWon % 2 == 0)
         {
-            audioSource1.volume = (puzzlePowerLevel / 9);
+            if (puzzlePowerLevel == 9)
+            {
+                SceneManager.LoadScene(4);
+            }
             puzzlePowerLevel += 1;
+            audioSource1.volume = (puzzlePowerLevel / 9.0f);
             switch (puzzlePowerLevel)
             {
                 case 1:
                     audioSource2.Stop();
                     audioSource2.clip = ppl1Clip;
                     audioSource2.Play();
+                    playingAudioBeforePuzzle = true;
+                return;
+                case 2:
+                    audioSource2.Stop();
+                    audioSource2.clip = ppl2Clip;
+                    audioSource2.Play();
+                    playingAudioBeforePuzzle = true;
+                return;
+                case 3:
+                    audioSource2.Stop();
+                    audioSource2.clip = ppl3Clip;
+                    audioSource2.Play();
+                    playingAudioBeforePuzzle = true;
+                return;
+                case 4:
+                    audioSource2.Stop();
+                    audioSource2.clip = ppl4Clip;
+                    audioSource2.Play();
+                    playingAudioBeforePuzzle = true;
+                return;
+                case 5:
+                    audioSource2.Stop();
+                    audioSource2.clip = ppl5Clip;
+                    audioSource2.Play();
+                    playingAudioBeforePuzzle = true;
+                return;
+                case 6:
+                    audioSource2.Stop();
+                    audioSource2.clip = ppl6Clip;
+                    audioSource2.Play();
+                    playingAudioBeforePuzzle = true;
+                return;
+                case 7:
+                    audioSource2.Stop();
+                    audioSource2.clip = ppl7Clip;
+                    audioSource2.Play();
+                    playingAudioBeforePuzzle = true;
+                return;
+                case 8:
+                    audioSource2.Stop();
+                    audioSource2.clip = ppl8Clip;
+                    audioSource2.Play();
+                    playingAudioBeforePuzzle = true;
+                return;
+                case 9:
+                    //audioSource2.Stop();
+                    //audioSource2.clip = ppl9Clip;
+                    //audioSource2.Play();
+                    SceneManager.LoadScene(3);
                 return;
             }
         }
